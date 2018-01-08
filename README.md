@@ -1,5 +1,9 @@
 # Havas Holiday Card 2017
 
+The Image Reader Greeter
+is a holiday mashup project designed and built by Havas in New York and Toronto.
+It is made possible by a number of technologies including Google Cloud Vision API, AWS S3, Datamuse, MaryTTS, CreateJS and FFmpeg.
+
 ## Running Locally
 
 [MaryTTS](https://github.com/marytts/marytts) needs to be running on default port (59125)  
