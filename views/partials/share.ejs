@@ -1,0 +1,14 @@
+<div class="buttons share">
+	<% if(isIOS){%>
+		<img src="/images/ishare-screen.png" />
+		<a href="<%= videoURL %>" class="button downlaod" target="_blank">download</a>
+	<%}else{%>
+		<img src="/images/share-screen.png" />
+		<a href="<%= videoURL %>" class="button downlaod" download>download</a>
+	<%}%>
+	<button class="button btn" data-clipboard-target="#copyurl"></button>
+	<a href="#email" class="button email" target="_blank">email</a>
+	<a href="https://twitter.com/share?url=<%=encodeURIComponent(fullURL)%>&amp;text=<%= encodeURIComponent(shareCopy) %>&amp;hashtags=holidaythis" class="button twitter" target="_blank">twitter</a>
+	<a href="http://www.facebook.com/sharer.php?u=<%=encodeURIComponent(fullURL)%>" class="button facebook" target="_blank">facebook</a>
+	<input id="copyurl" value="<%= fullURL %>" />
+</div>

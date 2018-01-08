@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <script src="/javascript/main.js"></script>
+  </head>
+  <body>
+  	<div id="body">
+	    <h1><%= title %></h1>
+	    <div class="left">
+	    	<label class="fileContainer">
+			    Click here take or choose your image
+			    <input id="image" type="file" name="file[]" accept="image/png, image/jpeg"/>
+			</label>
+		    <div class="imgPreview">
+			    <canvas id="canvas" width="1080" height="1920"></canvas>
+			    <div class="buttons audio">
+			    	<p>Holiday this shit?</p>
+			    	<a href="#yes" class="button yes">YES</a>
+			    	<a href="#no" class="button no">NO</a>
+			    </div>
+			    <div class="buttons video">
+			    	<p>Make Video?</p>
+			    	<a href="#yes" class="button yes">YES</a>
+			    	<a href="#no" class="button no">NO</a>
+			    </div>
+			    <div class="overlay">
+			    </div>
+		    </div>
+		</div>
+		<div class="right">
+			<!-- <div class="tags noVision">
+				<p>click tags below to fill out song<br />
+					<small>keep clicking to cycle through random ryhmes</small>
+				</p>
+			    <div class="imageTags">
+			    </div>
+			</div> -->
+		<% if(voices.error){ %>
+				MaryTTS is not running on this server
+		<%}else{%>
+		<div class="noVision">
+			<input type="hidden" id="line" value="click one of the song lines"/>
+			<br />
+			<br />
+			<label>Select Voice</label>
+			<br />
+			<select id="voice">
+			<%
+				Object.keys(voices).forEach(function(key){
+				if(!voices[key].locale.includes('en'))return;
+			%>
+				   <option value='{"<%-key %>" : <%- JSON.stringify(voices[key]) %>}'><%= voices[key].gender %> from <%= voices[key].locale %> type <%= voices[key].type %> id <%-key %></option>
+			<%});%>
+			</select>
+			<br />
+			<div class="lines">
+				<div id="line1"><a href="#">Curl up by the fire with this <span id="word">{{ word from vision api goes here }}</span></a></div>
+				<div id="line2"><a href="#">Cus baby, it’s cold outside today</span></a></div>
+				<div id="line3"><a href="#">At least it’s not a picture of a <span id="rhyme">{{ rhyme goes here }}</span></a></div>
+				<div id="line4"><a href="#">That wouldn’t have sent any warmth your way</span></a></div>
+			</div>
+		</div>
+		<%}%>
+		</div>
+</div>
+  </body>
+</html>

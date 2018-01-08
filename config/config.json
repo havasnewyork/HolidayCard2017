@@ -1,0 +1,28 @@
+{
+  "development": {
+    "username": "nytechuser",
+    "password": "tech@200",
+    "database": "HolidayCard2017",
+    "host": "gs02-srv050.globalservs.com",
+    "dialect": "mysql",
+    "logging":false
+  },
+   "stage": {
+    "username": "holiday",
+    "password": "beijD6WQXF2hvaf4ceec",
+    "database": "HolidayCard2017",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "logging":false
+  },
+    "production": {
+    "username": "holiday",
+    "password": "beijD6WQXF2hvaf4ceec",
+    "database": "HolidayCard2017",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "logging":false
+  }
+}
+
+  

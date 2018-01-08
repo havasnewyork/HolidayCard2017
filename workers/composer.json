@@ -1,0 +1,25 @@
+{
+    "name": "holiday-2017/workers",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Sebastien Barre",
+            "email": "sebastien.barre@havas.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0",
+        "react/child-process": "^0.5.0",
+        "mkraemer/react-pcntl": "^3.0",
+        "aws/aws-sdk-php": "^3.41",
+        "vlucas/phpdotenv": "^2.4",
+        "react/promise": "^2.5",
+        "monolog/monolog": "^1.23",
+        "wapmorgan/mp3info": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "Havas\\Holiday\\": "src/"
+        }
+    }
+}

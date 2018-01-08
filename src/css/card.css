@@ -1,0 +1,39 @@
+#card {
+        .imgPreview {
+            display: inline-block;
+            position: relative;
+            width: auto;
+            z-index: 1;
+            position: absolute;
+            margin: auto;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+                img {
+                    display: block;
+                    height: 100%;
+                }
+            .overlay {
+                display: block;
+            }
+            .buttons{
+                display: block;
+                .button{
+                    position: absolute;
+                    z-index: 10;
+                }
+                img{
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            video{
+                position: absolute;
+                top:0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+            }
+        }
+}

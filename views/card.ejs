@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+<head>
+    <title>
+        <%= title %>
+    </title>
+
+    <meta property="fb:app_id" content="547539445595754" />
+    <meta property="og:url" content="<%=fullURL%>" />
+    <meta property="og:title" content="<%= title %>" />
+	<meta property="og:type" content="video.other"> 
+	<meta property="og:video" content="<%= videoURL %>">
+	<meta property="og:video:type" content="video/mp4"> 
+	<meta property="og:video:width" content="608"> 
+	<meta property="og:video:height" content="1080"> 
+	<meta property="og:video:secure_url" content="<%= videoURL %>">
+	<meta property="og:description" content="<%= shareCopy %>" />
+    <meta property="og:image" content="<%=rootURL%>/images/social-share.png" />
+	<meta property="og:image:width" content="1200"> 
+	<meta property="og:image:height" content="630"> 
+
+
+    <meta name="twitter:card" content="player" />
+    <meta name="twitter:site" content="@havasnyc" />
+    <meta name="twitter:title" content=" <%= title %>" />
+    <meta name="twitter:image" content="<%=rootURL%>/images/social-share.png" />
+    <meta name="twitter:image:src" content="<%=rootURL%>/images/social-share.png" />
+    <meta name="twitter:player" content="<%= rootURL %>/card/player/<%=uid%>">
+    <meta name="twitter:player:width" content="608">
+    <meta name="twitter:player:height" content="1080">
+    <meta name="twitter:player:stream" content="<%=videoURL%>" />
+    <meta name="twitter:player:stream:content_type" content="video/mp4">
+
+	<script src="https://cdn.plyr.io/2.0.18/plyr.js"></script>
+	<link rel="stylesheet" href="https://cdn.plyr.io/2.0.18/plyr.css">
+    <script src="/javascript/card.js"></script>
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+<link rel="manifest" href="/favicons/manifest.json">
+<link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="theme-color" content="#ffffff">
+<% include ./partials/tracking %> 
+</head>
+
+
+		<body id="card" class="ready">
+			    <div class="imgPreview">
+			    	<% include partials/info %> 
+			    	<img src="<%= imgURL %>" class="previewCanvas"/>
+					<video id="vidPlayer" poster="<%= overlayURL %>" crossorigin>
+					  <source src="<%= videoURL %>" type="video/mp4">
+					</video>
+					<% include ./partials/share %> 
+<!--
+				    <div class="buttons share">
+				    	<img src="/images/share-screen.png" />
+				    	<a href="<%= videoURL %>" class="button downlaod" download>download</a>
+				    	<a href="<%= fullURL %>" class="button copy">copy</a>
+				    	<a href="#email" class="button email">email</a>
+				    	<a href="#twitter" class="button twitter">twitter</a>
+				    	<a href="#facebook" class="button facebook">facebook</a>
+				    </div> -->
+			    </div>
+			    <!-- <textarea id="shareurl" rows="1" cols="30"></textarea> -->
+		</body>
+
+</html>

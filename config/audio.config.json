@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "voices": [
+            {
+                "url": "voices/test2.m4a",
+                "offset": 1.8
+            },
+            {
+                "url": "voices/test3.m4a",
+                "offset": 9.2
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "voices": [
+            {
+                "url": "voices/test2.m4a",
+                "offset": 8
+            },
+            {
+                "url": "voices/test3.m4a",
+                "offset": 9.7
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "voices": [
+            {
+                "url": "voices/test2.m4a",
+                "offset": 8.3
+            }
+        ]
+    }
+]
